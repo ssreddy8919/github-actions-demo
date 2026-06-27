@@ -1,0 +1,20 @@
+name: Testing Workflow Variables
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  cloud: aws-cloud
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Medha it's Saturday"
+        run: echo "$Greeting $First_Name is using $cloud!"
+        env:
+          First_Name: Aadhya
