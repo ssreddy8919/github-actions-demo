@@ -2,9 +2,7 @@ name: Testing Workflow Variables
 
 on:
   push:
-    branches:
-      - main
-
+  
 env:
   cloud: aws-cloud
 
